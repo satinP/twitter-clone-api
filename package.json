@@ -8,7 +8,10 @@
     "generate": "npm -s run generate:prisma && npm -s run generate:nexus",
     "generate:prisma": "prisma generate",
     "generate:nexus": "ts-node --transpile-only src/schema",
-    "dev": "ts-node-dev --no-notify --respawn --transpile-only src/server"
+    "dev": "ts-node-dev --no-notify --respawn --transpile-only src/server",
+    "migrate-dev": "prisma migrate dev --preview-feature",
+    "migrate-reset": "prisma migrate reset --preview-feature",
+    "migrate-status": "prisma migrate status --preview-feature"
   },
   "dependencies": {
     "@prisma/client": "2.17.0",
